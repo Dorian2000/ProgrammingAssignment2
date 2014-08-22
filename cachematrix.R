@@ -57,3 +57,9 @@ cacheSolve <- function (x=matrix(), ...) {
         x$setinverse(m) # run the setinverse function on the inverse to cache the inverse
         m # return the inverse
 }
+
+# Test the functions
+x <- matrix(c(4,9,7,2), nrow=2, ncol=2) 
+y <- makeCacheMatrix(x)
+inv <- cacheSolve(y)
+inv
